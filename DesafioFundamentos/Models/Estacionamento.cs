@@ -6,18 +6,29 @@ using System.Threading.Tasks;
 
 namespace DesafioFundamentos.Models
 {
+    /// <summary>
+    /// Representa um estacionameto.
+    /// </summary>
     public class Estacionamento
     {
         private decimal precoInicial = 0;
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
 
+        /// <summary>
+        /// Representa um estacionameto.
+        /// </summary>
+        /// <param name="precoInicial">Preço inicial para estacionar um carro.</param>
+        /// <param name="precoPorHora">Preço por hora que o carro permanecer no estacionamento.</param>
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
             this.precoInicial = precoInicial;
             this.precoPorHora = precoPorHora;
         }
 
+        /// <summary>
+        /// Adiciona um veículo a lista.
+        /// </summary>
         public void AdicionarVeiculo()
         {
             // Pedir para o usuário digitar uma placa e adicionar na lista "veiculos".
@@ -26,6 +37,9 @@ namespace DesafioFundamentos.Models
             veiculos.Add(placa);
         }
 
+        /// <summary>
+        /// Remove um veículo da lista.
+        /// </summary>
         public void RemoverVeiculo()
         {
             ListarVeiculos();
@@ -57,6 +71,9 @@ namespace DesafioFundamentos.Models
             }
         }
 
+        /// <summary>
+        /// Elenca os veículos que compões a lista.
+        /// </summary>
         public void ListarVeiculos()
         {
             // Verifica se há veículos no estacionamento
